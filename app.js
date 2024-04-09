@@ -27,7 +27,7 @@ app.get("/search", (req, res) => {
   const results = mockData1.filter((movie) =>
     movie.genre.toLowerCase().includes(genre.toLowerCase())
   );
-  res.status(200).json(results);
+  res.status(200).json({ payload: results });
 });
 app.get("/:id", (req, res) => {
   const id = req.params.id;
