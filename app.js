@@ -34,7 +34,7 @@ app.get("/:id", (req, res) => {
       error: "Movie Not Found",
     });
   } else {
-    res.status(200).json(item);
+    res.status(200).json({ payload: item });
   }
 });
 
